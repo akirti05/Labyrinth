@@ -187,7 +187,7 @@ There are no explicit rules — only the idea that understanding is the only way
 
 ### ❌ 0% Accuracy – Exists but Not Related
 
-![Accuracy 0](0%.png)
+![0% Accuracy – Exists but Not Related](accuracy_0.png)
 
 **Example Input:** `hi`
 
@@ -199,7 +199,7 @@ This demonstrates that semantic systems understand *existence*, not correctness.
 
 ### ⚠️ 35% Accuracy – Vague Connection
 
-![Accuracy 35](35%.png)
+![35% Accuracy – Vague Connection](accuracy_35.png)
 
 **Example Input:** `thinking`
 
@@ -211,8 +211,7 @@ This represents early intuition without clarity.
 
 ### 🔗 55% Accuracy – Related but Not Core Meaning
 
-![Accuracy 55](55%.png)
-
+![55% Accuracy – Related but Not Core](accuracy_55.png)
 **Example Input:** `brain`
 
 **Explanation:**  
