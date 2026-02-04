@@ -177,8 +177,6 @@ Each screenshot corresponds to a different **semantic interpretation level**, po
 
 ### 🏠 Landing Screen – Entry Point
 
-![Labyrinth Home](homeL.png)
-
 ![Home Screen](homeL.png)
 
 **Description:**  
