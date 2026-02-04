@@ -177,7 +177,7 @@ Each screenshot corresponds to a different **semantic interpretation level**, po
 
 ### 🏠 Landing Screen – Entry Point
 
-![Labyrinth Home](./homeL.png)
+![Labyrinth Home](homeL.png)
 
 **Description:**  
 The player enters a quiet, atmospheric space.  
@@ -187,7 +187,7 @@ There are no explicit rules — only the idea that understanding is the only way
 
 ### ❌ 0% Accuracy – Exists but Not Related
 
-![Accuracy 0](./0%.png)
+![Accuracy 0](0%.png)
 
 **Example Input:** `hi`
 
@@ -199,7 +199,7 @@ This demonstrates that semantic systems understand *existence*, not correctness.
 
 ### ⚠️ 35% Accuracy – Vague Connection
 
-![Accuracy 35](./35%.png)
+![Accuracy 35](35%.png)
 
 **Example Input:** `thinking`
 
@@ -211,7 +211,7 @@ This represents early intuition without clarity.
 
 ### 🔗 55% Accuracy – Related but Not Core Meaning
 
-![Accuracy 55](./55%.png)
+![Accuracy 55](55%.png)
 
 **Example Input:** `brain`
 
@@ -222,7 +222,7 @@ The word is clearly related to the theme, but it does not capture the core idea 
 
 ### 🧠 Room I – Core Understanding Achieved
 
-![Room 1](./room1.png)
+![Room 1](room1.png)
 
 **Example Input:** `memory`
 
@@ -234,7 +234,7 @@ Endee confirms strong similarity and the next room unlocks.
 
 ### ✉️ Room II – Perspective & Interpretation
 
-![Room 2](./room2.png)
+![Room 2](room2.png)
 
 **Explanation:**  
 This room explores how the same event can be remembered differently depending on emotional perspective.
@@ -243,7 +243,7 @@ This room explores how the same event can be remembered differently depending on
 
 ### 🎭 Room III – Emotion as Meaning
 
-![Room 3](./room3.png)
+![Room 3](room3.png)
 
 **Explanation:**  
 Nothing external changes — only emotion does.  
