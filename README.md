@@ -301,48 +301,130 @@ labyrinth/
 
 ---
 
-## 🐳 Docker & Endee Setup
+## 🔍 How to Verify the Use Case (End-to-End Working)
 
-Endee runs locally using Docker.
-
-⚙️ Setup & Execution Instructions
-Prerequisites
-
-Python 3.10+
-
-Docker & Docker Compose
-
-pip
+This section explains how to verify that the semantic use case works as intended, not just that the application runs.
 ```bash
 
-1️⃣ Start Endee (Vector Database)
+Step 1: Start the Endee Vector Database
+
+Ensure Docker is running, then start Endee:
+
 docker compose up -d
 
 
 Endee will be available at:
+
 http://localhost:8080
 
-2️⃣ Load Documents into Endee
+
+This confirms that the vector database service is running locally.
+```
+```bash
+
+Step 2: Load Semantic Documents into Endee
+
+Run the document ingestion script:
 
 python load_endee.py
 
-This step:
 
-Reads room documents
+This step performs the following actions:
 
-Generates embeddings
+Reads narrative documents from:
 
-Inserts vectors into Endee
+data/room1/documents.txt
+
+data/room2/documents.txt
+
+data/room3/documents.txt
+
+Generates vector embeddings using SentenceTransformers
+
+Inserts vectors into Endee using cosine similarity
 
 Confirms successful indexing
 
-3️⃣ Run the Application
+⚠️ This step is mandatory.
+Without it, Endee has no semantic memory to reason over.
+```
+```bash
+
+Step 3: Run the Application
+
+Start the Streamlit interface:
+
 streamlit run app.py
 
 
-Open in your browser:
+Open the application in your browser:
+
 http://localhost:8501
 ```
+```bash
+
+Step 4: Verify Semantic Understanding (Core Use Case)
+
+The core use case is semantic interpretation, not keyword matching.
+
+Use the input box to test the following:
+
+Example 1: Unrelated Input
+
+Input: hi
+
+Expected Result: 0% Accuracy
+
+Meaning: Word exists in vector space but is not semantically related
+
+Example 2: Vague Semantic Connection
+
+Input: thinking
+
+Expected Result: ~35% Accuracy
+
+Meaning: Weak or unclear semantic association
+
+Example 3: Related but Not Core Meaning
+
+Input: brain
+
+Expected Result: ~55% Accuracy
+
+Meaning: Related concept, but not the underlying intent
+
+Example 4: Core Understanding
+
+Input: memory / perspective / emotion
+
+Expected Result: 75% Accuracy
+
+Result: Room unlocks and progression continues
+```
+
+### What This Confirms
+
+Endee is queried for every input
+
+Semantic similarity is measured continuously
+
+Progress depends on degree of understanding
+
+No exact keywords or hard-coded answers are used
+
+This validates the complete semantic reasoning pipeline using Endee.
+
+### Why This Matters
+
+This project demonstrates:
+
+Practical use of a vector database beyond search
+
+Interpretation of similarity scores into human feedback
+
+End-to-end semantic reasoning in a real application
+
+Alignment between AI behavior and user experience
 
 ---
 
