@@ -291,9 +291,9 @@ labyrinth/
 ├── room2.png               # Room II gameplay screen
 ├── room3.png               # Room III gameplay screen
 │
-├── 0%.png                  # Example: no semantic relation
-├── 35%.png                 # Example: vague semantic connection
-├── 55%.png                 # Example: related but not core meaning
+├── accuracy_0.png                 # Example: no semantic relation
+├── accuracy_35.png                 # Example: vague semantic connection
+├── accuracy_55.png                 # Example: related but not core meaning
 
 ````
 
