@@ -179,6 +179,8 @@ Each screenshot corresponds to a different **semantic interpretation level**, po
 
 ![Labyrinth Home](homeL.png)
 
+![Home Screen](homeL.png)
+
 **Description:**  
 The player enters a quiet, atmospheric space.  
 There are no explicit rules — only the idea that understanding is the only way forward.
