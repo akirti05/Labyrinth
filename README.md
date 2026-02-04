@@ -182,7 +182,7 @@ The visuals reinforce the mental state of each room, aligning **aesthetics with 
 ---
 
 ## 📂 Project Structure
-
+```bash
 labyrinth/
 │
 ├── load_endee.py # Embeds and loads documents into Endee
@@ -194,6 +194,8 @@ labyrinth/
 ├── docker-compose.yml # Endee service configuration
 └── README.md
 
+````
+
 
 ---
 
@@ -201,12 +203,6 @@ labyrinth/
 
 Endee runs locally using Docker.
 
-### Start Endee
-
-```bash
-docker compose up -d
-
----
 ⚙️ Setup & Execution Instructions
 Prerequisites
 
@@ -215,6 +211,7 @@ Python 3.10+
 Docker & Docker Compose
 
 pip
+```bash
 
 1️⃣ Start Endee (Vector Database)
 docker compose up -d
@@ -243,34 +240,35 @@ streamlit run app.py
 
 Open in your browser:
 http://localhost:8501
+```
 
 ---
-🚀 Version Control & GitHub Deployment
+##🚀 Version Control & GitHub Deployment
 
 This project is version-controlled using Git and can be pushed to GitHub using the following steps.
 
-Initialize Git Repository (if not already initialized)
+Initialize Git Repository (if not already initialized):
 git init
 
-Add Project Files
+Add Project Files:
 git add .
 
-Commit Changes
+Commit Changes:
 git commit -m "Initial commit: Labyrinth semantic escape room using Endee"
 
-Add Remote Repository
+Add Remote Repository:
 
 Replace <your-repository-url> with your GitHub repository URL.
 
 git remote add origin <your-repository-url>
 
-Push to GitHub
+Push to GitHub:
 git branch -M main
 git push -u origin main
 
 ---
 
-🛠️ Technologies Used
+##🛠️ Technologies Used
 
 Component	Technology
 Language	Python
@@ -283,7 +281,7 @@ Styling	Custom CSS
 
 ---
 
-🎯 What This Project Demonstrates
+##🎯 What This Project Demonstrates
 
 Deep conceptual understanding of vector databases
 
@@ -298,7 +296,7 @@ Thoughtful interpretation of AI outputs
 Strong alignment between UX and AI behavior
 ---
 
-🏁 Conclusion
+##🏁 Conclusion
 
 Labyrinth demonstrates how a vector database like Endee can be used not just for retrieval, but for reasoning, interpretation, and experience design.
 
