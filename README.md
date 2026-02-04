@@ -93,6 +93,7 @@ The system distinguishes **existence in semantic space** from **relevance to int
 ## 🏗️ System Design & Technical Approach
 
 ### High-Level Flow
+```bash
 User Input
 ↓
 SentenceTransformer Embedding
@@ -106,6 +107,7 @@ Semantic Similarity Signal
 Interpretation Logic
 ↓
 Gameplay Feedback
+```
 
 ---
 
@@ -155,8 +157,11 @@ While Endee returns similarity signals internally, Labyrinth interprets them con
 semantic_strength = similarity(query_vector, document_vectors)
 
 if semantic_strength < threshold_1 → 0%
+
 elif semantic_strength < threshold_2 → 35%
+
 elif semantic_strength < threshold_3 → 55%
+
 else → 75%
 
 This abstraction allows semantic systems to behave **interpretively**, not mechanically.
@@ -243,45 +248,41 @@ http://localhost:8501
 ```
 
 ---
-##🚀 Version Control & GitHub Deployment
+
+
+## 🚀 Version Control & GitHub Deployment
+
 
 This project is version-controlled using Git and can be pushed to GitHub using the following steps.
-
-Initialize Git Repository (if not already initialized):
-git init
-
-Add Project Files:
-git add .
-
-Commit Changes:
-git commit -m "Initial commit: Labyrinth semantic escape room using Endee"
-
-Add Remote Repository:
-
-Replace <your-repository-url> with your GitHub repository URL.
-
-git remote add origin <your-repository-url>
-
-Push to GitHub:
+``` bash
+git init  #Initialize Git Repository (if not already initialized)
+git add .  #Add Project Files
+git commit -m "Initial commit: Labyrinth semantic escape room using Endee"  #Commit Changes
+git remote add origin https://github.com/akirti05/Labyrinth.git  #add remote repository
+#push to github
 git branch -M main
 git push -u origin main
+```
+
 
 ---
 
-##🛠️ Technologies Used
 
-Component	Technology
-Language	Python
-UI	Streamlit
-Embeddings	SentenceTransformers
-Vector Database	Endee
-API	REST
-Containerization	Docker
-Styling	Custom CSS
+## 🛠️ Technologies Used
+
+| Component | Technology |
+|---------|------------|
+| Language | Python |
+| UI | Streamlit |
+| Embeddings | SentenceTransformers |
+| Vector Database | Endee |
+| API | REST |
+| Containerization | Docker |
+| Styling | Custom CSS |
 
 ---
 
-##🎯 What This Project Demonstrates
+## 🎯 What This Project Demonstrates
 
 Deep conceptual understanding of vector databases
 
@@ -294,9 +295,10 @@ Real-time vector search integration
 Thoughtful interpretation of AI outputs
 
 Strong alignment between UX and AI behavior
+
 ---
 
-##🏁 Conclusion
+## 🏁 Conclusion
 
 Labyrinth demonstrates how a vector database like Endee can be used not just for retrieval, but for reasoning, interpretation, and experience design.
 
