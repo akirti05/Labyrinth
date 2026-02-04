@@ -93,6 +93,7 @@ The system distinguishes **existence in semantic space** from **relevance to int
 ## 🏗️ System Design & Technical Approach
 
 ### High-Level Flow
+```bash
 User Input
 ↓
 SentenceTransformer Embedding
@@ -106,6 +107,7 @@ Semantic Similarity Signal
 Interpretation Logic
 ↓
 Gameplay Feedback
+```
 
 ---
 
@@ -155,13 +157,100 @@ While Endee returns similarity signals internally, Labyrinth interprets them con
 semantic_strength = similarity(query_vector, document_vectors)
 
 if semantic_strength < threshold_1 → 0%
+
 elif semantic_strength < threshold_2 → 35%
+
 elif semantic_strength < threshold_3 → 55%
+
 else → 75%
 
 This abstraction allows semantic systems to behave **interpretively**, not mechanically.
 
 ---
+
+## 📸 Visual Walkthrough & Semantic Interpretation
+
+This section showcases how semantic understanding progresses through **Labyrinth**.
+Each screenshot corresponds to a different **semantic interpretation level**, powered by the Endee vector database and translated into human-readable feedback.
+
+---
+
+### 🏠 Landing Screen – Entry Point
+
+![Labyrinth Home](./homeL.png)
+
+**Description:**  
+The player enters a quiet, atmospheric space.  
+There are no explicit rules — only the idea that understanding is the only way forward.
+
+---
+
+### ❌ 0% Accuracy – Exists but Not Related
+
+![Accuracy 0](./0%.png)
+
+**Example Input:** `hi`
+
+**Explanation:**  
+The word exists in Endee’s vector space, but it has **no semantic relevance** to the room’s meaning.  
+This demonstrates that semantic systems understand *existence*, not correctness.
+
+---
+
+### ⚠️ 35% Accuracy – Vague Connection
+
+![Accuracy 35](./35%.png)
+
+**Example Input:** `thinking`
+
+**Explanation:**  
+The word has a loose semantic association but does not explain what is happening.  
+This represents early intuition without clarity.
+
+---
+
+### 🔗 55% Accuracy – Related but Not Core Meaning
+
+![Accuracy 55](./55%.png)
+
+**Example Input:** `brain`
+
+**Explanation:**  
+The word is clearly related to the theme, but it does not capture the core idea needed to progress.
+
+---
+
+### 🧠 Room I – Core Understanding Achieved
+
+![Room 1](./room1.png)
+
+**Example Input:** `memory`
+
+**Explanation:**  
+Semantic intent aligns with the room’s meaning.  
+Endee confirms strong similarity and the next room unlocks.
+
+---
+
+### ✉️ Room II – Perspective & Interpretation
+
+![Room 2](./room2.png)
+
+**Explanation:**  
+This room explores how the same event can be remembered differently depending on emotional perspective.
+
+---
+
+### 🎭 Room III – Emotion as Meaning
+
+![Room 3](./room3.png)
+
+**Explanation:**  
+Nothing external changes — only emotion does.  
+Once the correct emotion is identified, the labyrinth no longer resists the player.
+
+---
+
 
 ## 🖥️ User Experience & Aesthetics
 
@@ -182,17 +271,34 @@ The visuals reinforce the mental state of each room, aligning **aesthetics with 
 ---
 
 ## 📂 Project Structure
-
-labyrinth/
+```bash
+LABYRINTH/
 │
-├── load_endee.py # Embeds and loads documents into Endee
-├── app.py # Streamlit UI + semantic logic
+├── app.py                  # Streamlit UI and semantic gameplay logic
+├── load_endee.py           # Embeds room documents and loads them into Endee
+├── docker-compose.yml      # Endee vector database service
+├── README.md               # Project documentation
+│
 ├── data/
-│ ├── room1/
-│ ├── room2/
-│ └── room3/
-├── docker-compose.yml # Endee service configuration
-└── README.md
+│   ├── room1/
+│   │   └── documents.txt   # Narrative + memory fragments (Room I – Reminiscence)
+│   ├── room2/
+│   │   └── documents.txt   # Conflicting perspectives (Room II – Note to Yourself)
+│   └── room3/
+│       └── documents.txt   # Emotional interpretation (Room III – Senses)
+│
+├── homeL.png               # Landing screen UI
+├── room1.png               # Room I gameplay screen
+├── room2.png               # Room II gameplay screen
+├── room3.png               # Room III gameplay screen
+│
+├── 0%.png                  # Example: no semantic relation
+├── 35%.png                 # Example: vague semantic connection
+├── 55%.png                 # Example: related but not core meaning
+
+
+
+````
 
 
 ---
@@ -201,12 +307,6 @@ labyrinth/
 
 Endee runs locally using Docker.
 
-### Start Endee
-
-```bash
-docker compose up -d
-
----
 ⚙️ Setup & Execution Instructions
 Prerequisites
 
@@ -215,6 +315,7 @@ Python 3.10+
 Docker & Docker Compose
 
 pip
+```bash
 
 1️⃣ Start Endee (Vector Database)
 docker compose up -d
@@ -243,47 +344,44 @@ streamlit run app.py
 
 Open in your browser:
 http://localhost:8501
+```
 
 ---
-🚀 Version Control & GitHub Deployment
+
+
+## 🚀 Version Control & GitHub Deployment
+
 
 This project is version-controlled using Git and can be pushed to GitHub using the following steps.
-
-Initialize Git Repository (if not already initialized)
-git init
-
-Add Project Files
-git add .
-
-Commit Changes
-git commit -m "Initial commit: Labyrinth semantic escape room using Endee"
-
-Add Remote Repository
-
-Replace <your-repository-url> with your GitHub repository URL.
-
-git remote add origin <your-repository-url>
-
-Push to GitHub
+``` bash
+git init  #Initialize Git Repository (if not already initialized)
+git add .  #Add Project Files
+git commit -m "Initial commit: Labyrinth semantic escape room using Endee"  #Commit Changes
+git remote add origin https://github.com/akirti05/Labyrinth.git  #add remote repository
+#push to github
 git branch -M main
 git push -u origin main
+```
+
 
 ---
 
-🛠️ Technologies Used
 
-Component	Technology
-Language	Python
-UI	Streamlit
-Embeddings	SentenceTransformers
-Vector Database	Endee
-API	REST
-Containerization	Docker
-Styling	Custom CSS
+## 🛠️ Technologies Used
+
+| Component | Technology |
+|---------|------------|
+| Language | Python |
+| UI | Streamlit |
+| Embeddings | SentenceTransformers |
+| Vector Database | Endee |
+| API | REST |
+| Containerization | Docker |
+| Styling | Custom CSS |
 
 ---
 
-🎯 What This Project Demonstrates
+## 🎯 What This Project Demonstrates
 
 Deep conceptual understanding of vector databases
 
@@ -296,9 +394,10 @@ Real-time vector search integration
 Thoughtful interpretation of AI outputs
 
 Strong alignment between UX and AI behavior
+
 ---
 
-🏁 Conclusion
+## 🏁 Conclusion
 
 Labyrinth demonstrates how a vector database like Endee can be used not just for retrieval, but for reasoning, interpretation, and experience design.
 
@@ -307,7 +406,3 @@ It transforms semantic similarity into something humans can feel.
 Endee is the foundation that makes this possible.
 
 ---
-
-
-
-
