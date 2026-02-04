@@ -278,7 +278,7 @@ LABYRINTH/
 ├── load_endee.py           # Embeds room documents and loads them into Endee
 ├── docker-compose.yml      # Endee vector database service
 ├── README.md               # Project documentation
-│
+labyrinth/
 ├── data/
 │   ├── room1/
 │   │   └── documents.txt   # Narrative + memory fragments (Room I – Reminiscence)
@@ -295,7 +295,6 @@ LABYRINTH/
 ├── 0%.png                  # Example: no semantic relation
 ├── 35%.png                 # Example: vague semantic connection
 ├── 55%.png                 # Example: related but not core meaning
-
 
 
 ````
